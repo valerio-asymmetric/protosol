@@ -1,2 +1,4 @@
 type.proto package:"fd_exec_test"
 type.proto include:"../../../../ballet/nanopb/pb_firedancer.h"
+
+fd_exec_test.QuicClose.connection_id max_size:32 fixed_length:true
