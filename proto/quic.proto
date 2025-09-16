@@ -1,0 +1,25 @@
+syntax = "proto3";
+package org.solana.sealevel.v1;
+
+message QuicClose {
+    uint32 connection_id = 1;
+}
+
+message QuicConnect {
+    uint32 connection_id = 1;
+}
+
+message QuicMsg {
+    oneof message_type {
+        QuicConnect connect = 1;
+        QuicClose close = 2;
+    }
+}
+
+message QuicInputMsg {
+    repeated QuicMsg messages = 1;
+}
+
+message QuicOutput {
+    uint32 connection_id = 1;
+}
