@@ -2,4 +2,4 @@ quic.proto package:"fd_exec_test"
 quic.proto include:"../../../../ballet/nanopb/pb_firedancer.h"
 
 fd_exec_test.QuicClose.connection_id max_size:32 fixed_length:true
-fd_exec_test.QuicSend.payload_sz max_value:1400
+fd_exec_test.QuicInputMsg.messages max_count:100
