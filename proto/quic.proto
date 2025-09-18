@@ -11,6 +11,7 @@ message QuicConnect {
 
 message QuicSend {
     uint32 connection_id = 1;
+    uint32 payload_sz = 2;
 }
 
 message QuicService {
@@ -24,6 +25,7 @@ message QuicMsg {
         QuicSend send = 3;
         QuicService service = 4;
     }
+    bytes buffer = 5;
 }
 
 message QuicInputMsg {
