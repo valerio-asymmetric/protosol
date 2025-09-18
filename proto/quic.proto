@@ -9,10 +9,20 @@ message QuicConnect {
     uint32 connection_id = 1;
 }
 
+message QuicSend {
+    uint32 connection_id = 1;
+}
+
+message QuicService {
+    uint32 connection_id = 1;
+}
+
 message QuicMsg {
     oneof message_type {
         QuicConnect connect = 1;
         QuicClose close = 2;
+        QuicSend send = 3;
+        QuicService service = 4;
     }
 }
 
